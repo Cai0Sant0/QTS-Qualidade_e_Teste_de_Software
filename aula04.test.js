@@ -1,14 +1,12 @@
-function verificarSubstring(string, substring) {
-    return string.includes(substring);
-}
+import { assertArrayIncludes } from "https://deno.land/std@0.224.0/assert/mod.ts";
 
 
-console.log("Teste 1:");
-let string1 = "Hello, world!";
-let substring1 = "world";
-console.log(verificarSubstring(string1, substring1)); 
+console.log("ex01:");
+Deno.test("Teste 1 tem", () => {
+    assertArrayIncludes([6,8], [6]);
+});
 
-console.log("Teste 2:");
-let string2 = "Olá mundo!";
-let substring2 = "Mundo"; 
-console.log(verificarSubstring(string2, substring2)); 
+console.log("ex02");
+Deno.test(" Teste 2 tem", () => {
+    assertArrayIncludes([6,8], [2]);
+});

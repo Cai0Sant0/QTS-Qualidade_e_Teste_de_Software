@@ -1,11 +1,12 @@
-function verificarArray(array, valor) {
-    return array.includes(valor);
-}
+import { assertStringIncludes } from "https://deno.land/std@0.224.0/assert/mod.ts";
 
-let array = [2,4,5,6,8];
 
 console.log("Teste 1:");
-console.log(verificarArray(array,9));
+Deno.test("Teste de String", ()=>{
+    assertStringIncludes("hello word", "word");
+});
 
 console.log("Teste 2:");
-console.log(verificarArray(array,2));
+Deno.test("Teste de String", ()=>{
+    assertStringIncludes("hello word", "jiji");
+});
